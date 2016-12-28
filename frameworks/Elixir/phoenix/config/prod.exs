@@ -2,17 +2,27 @@ use Mix.Config
 
 config :hello, Hello.Endpoint,
   url: [host: "0.0.0.0"],
-  http: [port: 8080],
+  http: [port: {:system, "PORT"}],
   cache_static_lookup: false,
   server: true
 
 config :hello, Hello.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "benchmarkdbuser",
-  password: "benchmarkdbpass",
+  #adapter: Sqlite.Ecto,
+  #database: "db/hello_world.sqlite"
+
+  adapter: Ecto.Adapters.MySQL,
+  username: "root",
+  password: "",
   database: "hello_world",
   hostname: "localhost",
-  pool_size: 20
+  pool_size: 10
+
+  #adapter: Ecto.Adapters.Postgres,
+  #username: "iskandarrizki",
+  #password: "",
+  #database: "hello_world",
+  #hostname: "localhost",
+  #pool_size: 20
 
 # ## SSL Support
 #

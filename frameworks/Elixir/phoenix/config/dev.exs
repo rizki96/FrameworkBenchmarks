@@ -23,11 +23,21 @@ config :hello, Hello.Endpoint,
   ]
 
 config :hello, Hello.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "benchmarkdbuser",
-  password: "benchmarkdbpass",
+  #adapter: Sqlite.Ecto,
+  #database: "db/hello_world.sqlite"
+
+  adapter: Ecto.Adapters.MySQL,
+  username: "root",
+  password: "",
   database: "hello_world",
-  hostname: "localhost"
+  hostname: "localhost",
+  pool_size: 10
+
+  #adapter: Ecto.Adapters.Postgres,
+  #username: "benchmarkdbuser",
+  #password: "benchmarkdbpass",
+  #database: "hello_world",
+  #hostname: "localhost"
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
