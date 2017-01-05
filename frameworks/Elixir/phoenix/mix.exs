@@ -17,7 +17,7 @@ defmodule Hello.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {Hello, []},
-     applications: [:phoenix, :phoenix_ecto, :mariaex, :cowboy, :logger, :phoenix_html]]
+     applications: [:phoenix, :phoenix_ecto, :postgrex, :cowboy, :logger, :phoenix_html]]
   end
 
   defp elixirc_paths(_), do: ["lib", "web"]
@@ -28,7 +28,7 @@ defmodule Hello.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.2"},
      {:phoenix_ecto, "~> 3.0"},
-     {:mariaex, ">= 0.0.0"},
+     {:postgrex, ">= 0.0.0"},
      {:cowboy, "~> 1.0.0"},
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev}]
