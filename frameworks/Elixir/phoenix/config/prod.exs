@@ -10,19 +10,19 @@ config :hello, Hello.Repo,
   #adapter: Sqlite.Ecto,
   #database: "db/hello_world.sqlite"
 
-  #adapter: Ecto.Adapters.MySQL,
-  #username: "root",
-  #password: "",
-  #database: "hello_world",
-  #hostname: "localhost",
-  #pool_size: 20
-
-  adapter: Ecto.Adapters.Postgres,
-  username: "iskandarrizki",
+  adapter: Ecto.Adapters.MySQL,
+  username: "root",
   password: "",
   database: "hello_world",
   hostname: "localhost",
   pool_size: 20
+
+  #adapter: Ecto.Adapters.Postgres,
+  #username: "iskandarrizki",
+  #password: "",
+  #database: "hello_world",
+  #hostname: "localhost",
+  #pool_size: 20
 
 # ## SSL Support
 #
